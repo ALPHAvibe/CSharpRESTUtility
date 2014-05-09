@@ -16,7 +16,7 @@ JsonRESTSerializer serializer = new JsonRESTSerializer
 Action&lt;HttpWebRequest&gt; requestSetup = request =&gt;
             {
                 request.ContentType = "application/json";
-                request.Headers[HttpRequestHeader.Authorization.ToString()] = "UserName", "UserPassword";
+                request.Headers[HttpRequestHeader.Authorization.ToString()] = RESTUtility.BasicAuthHeaderValue("UserName", "UserPassword");
             };
 
 string urlRESTEndPoint = "https://foo.com/bar"
