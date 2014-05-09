@@ -4,7 +4,8 @@ WebRequestTools
 C# Project for making generic REST service requests
 
 
-Basic Usage ##############################################################################################
+Basic Usage
+===============
 
 JsonRESTSerializer serializer = new JsonRESTSerializer
         {
@@ -22,4 +23,3 @@ string urlRESTEndPoint = "https://foo.com/someobject"
 
 SomeObject response = RESTUtility.Get<SomeObject>(urlRESTEndPoint, serializer, requestSetup);
 
-###########################################################################################################
