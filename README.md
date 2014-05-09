@@ -13,7 +13,7 @@ JsonRESTSerializer serializer = new JsonRESTSerializer
         };
 
 
-Action<HttpWebRequest> requestSetup = request =>
+Action&lt;HttpWebRequest&gt; requestSetup = request =&gt;
             {
                 request.ContentType = "application/json";
                 request.Headers[HttpRequestHeader.Authorization.ToString()] = "UserName", "UserPassword";
@@ -21,5 +21,5 @@ Action<HttpWebRequest> requestSetup = request =>
 
 string urlRESTEndPoint = "https://foo.com/bar"
 
-Bar = RESTUtility.Get<Bar>(urlRESTEndPoint, serializer, requestSetup);
+Bar response = RESTUtility.Get&lt;Bar&gt;(urlRESTEndPoint, serializer, requestSetup);
 </code></pre>
