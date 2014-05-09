@@ -82,7 +82,7 @@ namespace WebRequestTools
             MakeRequest(HttpVerb.DELETE.ToString(), url, String.Empty, setRequest);
         }
 
-        public static string MakeRequest(string httpVerb, string url, string payload, Action<System.Net.HttpWebRequest> setRequest = null)
+        public static string MakeRequest(string httpVerb, string url, string payload, Action<HttpWebRequest> setRequest = null)
         {
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = httpVerb;
